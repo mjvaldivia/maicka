@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * Shorthill
+ *
+ * @copyright   Copyright (c) 2013 Shorthill Solutions (http://www.shorthillsolutions.com)
+ * @author      Carlos Ayala <carlos.ayala@shorthillsolutions.com>
+ */
+?>
+<div id="content" class="span11">
+    <!-- El contenido comienza -->
+    <div>
+        <ul class="breadcrumb">
+            <li>
+                <a href="/admin/index">Home</a> <span class="divider">/</span>
+            </li>
+            <li>
+                <a href="/admin/proveedor">Proveedor : <strong> <?php echo $this->proveedor_name ?> </strong> </a> <span class="divider">/</span>
+            </li>
+            <li>
+                <a href="/admin/plan/index/proveedor/<?php echo $this->id_proveedor ?>">Plan : <strong> <?php echo $this->plan_name ?></a> </strong> <span class="divider">/</span>
+            </li>
+            <li>
+                <a href="#">Tarifas</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="row-fluid">
+         <div class="box span2">
+            <div class="box-header well">
+                <h2><i class="icon-info-sign"></i> Buscar </h2>             
+            </div>
+            <div class="box-content">
+                <?php echo $this->search_form; ?>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="box span10">
+            <div class="box-header well">
+                <h2><i class="icon-info-sign"></i>Lista de tarifas</h2> 
+                <div class="box-icon"> 
+                  <a title="Ir Atras" data-rel="tooltip" href="/admin/plan/index/proveedor/<?php echo $this->id_proveedor ?>" data-rel="tooltip" class="btn btn-round">
+                      <i class="icon-arrow-left"></i>
+                  </a> 
+                </div>
+            </div>
+            <div class="box-content normal-list">
+                <p>
+                    <a class="btn" href="/admin/tarifa/new/plan/<?php echo $this->id_plan;?>">
+                        <i class="icon icon-page"></i>Nueva
+                    </a>
+                </p>
+                <?php echo $this->Tarifa_Lista($this->id_plan); ?>
+                <div class="clearfix"></div>
+            </div>
+ 
+            
+            
+        </div>
+    </div>
+
+      
+</div><!--/#content.span10-->
+

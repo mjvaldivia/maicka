@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * Shorthill
+ *
+ * @copyright   Copyright (c) 2011 Shorthill Solutions (http://www.shorthillsolutions.com)
+ * @author      Carlos Ayala <carlos.ayala@shorthillsolutions.com>
+ */
+?>
+<div class="row-fluid">
+        <div class="span12 center login-header">
+                <h2>Bienvenido al administrador de Comparaclick</h2>
+        </div><!--/span-->
+</div><!--/row-->
+
+<div class="row-fluid">
+        <div class="well span5 center login-box">
+                
+                <?php echo $this->Login_Mensaje($this->mensaje, $this->correcto); ?>
+                
+                <form class="form-horizontal" action="/<?php echo $this->module ?>/login/process" method="post">
+                    
+                    <fieldset>
+                            <input type="hidden" name="requesturl" value="<?php echo $this->request_url; ?>" />
+                            <div class="input-prepend" title="Username" data-rel="tooltip">
+                                <span class="add-on">
+                                    <i class="icon-user"></i>
+                                </span>
+                                <input autofocus class="input-large span10" name="username" id="username" type="text" value="" />
+                            </div>
+                            <div class="clearfix"></div>
+
+                            <div class="input-prepend" title="Password" data-rel="tooltip">
+                                <span class="add-on">
+                                    <i class="icon-lock"></i>
+                                </span>
+                                <input class="input-large span10" name="password" id="password" type="password" value="" />
+                            </div>
+                            <div class="clearfix"></div>
+
+                            
+                            
+                            <div class="clearfix"></div>
+
+                            <p class="center span5">
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                            </p>
+                            
+                    </fieldset>
+                    
+                </form>
+        </div><!--/span-->
+</div><!--/row-->

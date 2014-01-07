@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Shorthill
+ *
+ * @copyright   Copyright (c) 2011 Shorthill Solutions (http://www.shorthillsolutions.com)
+ * @author      Carlos Ayala <carlos.ayala@shorthillsolutions.com>
+ */
+
+$attribs = $this->element->getAttribs();
+
+?>
+<div class="form-actions">
+    <button class="btn btn-primary" type="submit">Guardar cambios</button>
+    <button class="btn" type="reset" onClick="document.location.href='<?php echo $attribs['cancel'] ?>'">Cancelar</button>
+</div>

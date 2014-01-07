@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * Shorthill
+ *
+ * @copyright   Copyright (c) 2011 Shorthill Solutions (http://www.shorthillsolutions.com)
+ * @author      Carlos Ayala <carlos.ayala@shorthillsolutions.com>
+ */
+?>
+
+<form name="photographer-manager" method="post" action="/backoffice/photographer-manager/process">    
+<div>
+    <?php echo $this->name; ?>
+</div>
+
+<div id="address-form" class="div-form">
+    <div id="address-content">
+        <?php echo $this->address; ?>
+    </div>
+    <div class="form-button">
+        <input type="button" value="Add Address" id="add-address" />
+    </div>
+</div>
+
+
+<div id="phone-form" class="div-form">
+    <div id="phone-content">
+        <?php echo $this->phone; ?>
+    </div>
+    <div class="form-button">
+        <input type="button" value="Add Phone" id="add-phone" />
+    </div>
+</div>
+
+<div id="email-form" class="div-form">
+    <div id="email-content">
+        <?php echo $this->email; ?>
+    </div>
+    <div class="form-button">
+        <input type="button" value="Add Email" id="add-email" />
+    </div>
+</div>
+
+<input type="submit" value="Save" />
+</form>

@@ -1,0 +1,30 @@
+.div-form-row{
+    clear: both;
+	margin-bottom:7px;
+}
+
+.div-form-row .element{
+	display:inline-block;
+}
+
+.div-hide{
+    display: none;
+}
+
+
+#div_address .control-group{
+    display:inline-block;
+}
+
+#div_profile .control-group{
+    display:inline-block;
+}
+
+#email-form{
+    float:left;
+    padding-left: 40px;
+}
+
+#phone-form{
+    float:left;
+}

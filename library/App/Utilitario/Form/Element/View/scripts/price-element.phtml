@@ -1,0 +1,21 @@
+<?php   
+    $attribs = $this->element->getAttribs();
+?>
+
+<div class="control-group">
+    <label class="control-label" for="<?php echo $this->element->getName() ?>"><?php echo $this->element->getLabel() ?></label>
+    <div class="controls">
+        <div class="input-prepend">
+            <span class="add-on"><?php echo $attribs['simbolo']; ?></span>
+            <input format="<?php echo $attribs['format']; ?>" class="<?php echo $attribs['class']; ?>" name="<?php echo $this->element->getName() ?>" id="<?php echo $this->element->getName() ?>" type="text" size="16" value="<?php echo $this->element->getValue() ?>">
+        </div>
+        <?php
+        if(strlen($this->element->getDescription())>0){
+        ?>
+        <p class="help-block"><?php echo $this->element->getDescription(); ?></p>
+        <?php
+        }
+        ?>
+    </div>
+</div>
+
