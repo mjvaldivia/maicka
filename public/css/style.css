@@ -57,7 +57,7 @@ body{
 .box-izq ul{
 	margin:0;
 	font-size:12px;
-	list-style-image: url(images/vb.png);
+	list-style-image: url(../images/vb.png);
 	}
 .box-izq li a{
 	text-decoration:none;
@@ -87,7 +87,7 @@ header, nav{
 }
 #header{
 	height:100px;
-	background-image:url(images/header1.jpg);
+	background-image:url(../images/header1.jpg);
 	background-repeat:no-repeat;
 	position:relative;
 	text-align:right;
@@ -112,7 +112,7 @@ header, nav{
 #header2{
 	width:763px;
 	height:199px;
-	background-image: url(images/webs-fmp3.jpg);
+	background-image: url(../images/webs-fmp3.jpg);
 	background-repeat:no-repeat;
 	position:relative;
 	color: #fff;
@@ -163,7 +163,7 @@ header, nav{
 .box2-head{
 	width:200px;
 	height:99px;
-	background-image: url(images/fdo-numeros.png);
+	background-image: url(../images/fdo-numeros.png);
 	background-repeat:no-repeat;
 	position:relative;
 	color:#FFF;
