@@ -14,22 +14,32 @@ class App_Layout_Render extends Zend_Controller_plugin_Abstract{
      * @param Zend_Controller_Request_Abstract $request 
      */
     public function preDispatch(Zend_Controller_Request_Abstract $request){ 
-        $config = Zend_Controller_Front::getInstance()->getParam('bootstrap')->getOptions(); 
-        $moduleName = $request->getModuleName(); 
         
-        if (isset($config[$moduleName]['resources']['layout']['layout'])) { 
-            $layoutScript = $config[$moduleName]['resources']['layout']['layout']; 
-            Zend_Layout::getMvcInstance()->setLayout($layoutScript); 
-        } 
+        $this->_cargaTemplate();
         
-        if (isset($config[$moduleName]['resources']['layout']['layoutPath'])) { 
-            $layoutPath = $config[$moduleName]['resources']['layout']['layoutPath']; 
-            Zend_Layout::getMvcInstance()->setLayoutPath($layoutPath); 
-        } 
-        
+        $moduleName = $request->getModuleName();
         $this->_cargaJs($moduleName);
         $this->_cargaCss($moduleName);
     } 
+    
+    protected function _cargaTemplate() {
+        
+        $cliente_repository = App_Doctrine_Repository::repository("Clientes");
+        if(APPLICATION_ENV == "production"){
+           $cliente = $cliente_repository->findOneBy(array("url_produccion" => $_SERVER['HTTP_HOST'])); 
+        }elseif(APPLICATION_ENV == "development"){
+           $cliente = $cliente_repository->findOneBy(array("url_development" => $_SERVER['HTTP_HOST']));  
+        }
+        
+        
+        if($cliente instanceof \Model\Entity\Clientes){
+            Zend_Layout::getMvcInstance()->setLayout("layout"); 
+        
+            $template = $cliente->getTemplate();
+            Zend_Layout::getMvcInstance()->setLayoutPath(LIBRARY_PATH . $template->getUbicacion()); 
+            
+        }
+    }
     
     /**
      * Carga el JS

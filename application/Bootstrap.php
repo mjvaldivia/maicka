@@ -20,7 +20,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
         $view->doctype("HTML5");
         $view->headTitle()->setSeparator(" - ")
-                          ->append("Comparaclick - Administrador");
+                          ->append("Maika - Cabañas Isla de Pascua");
 
         $view->headMeta()->setCharset("utf-8");
         
@@ -48,8 +48,11 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
       */
     protected function _initModulesDirectory(){
         $front = Zend_Controller_Front::getInstance();
-        $front->addControllerDirectory(APPLICATION_PATH."/../library/App/Grid/Controller","grid")
-              ->addControllerDirectory(APPLICATION_PATH."/../library/App/Module/Entities/controllers/","entitymanager");
+        $front->addControllerDirectory(APPLICATION_PATH."/../library/App/Grid/Controller", "grid");
+        $front->addControllerDirectory(LIBRARY_PATH . "/App/Template/Maicka/Modulo/Site/controllers", "site");
+        
+        //$front->addModuleDirectory(LIBRARY_PATH . "/App/Template/Maicka/Modulo");
+        
     } 
     
 
