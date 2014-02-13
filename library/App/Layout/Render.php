@@ -26,7 +26,8 @@ class App_Layout_Render extends Zend_Controller_plugin_Abstract{
         
         $cliente_repository = App_Doctrine_Repository::repository("Clientes");
         if(APPLICATION_ENV == "production"){
-           $cliente = $cliente_repository->findOneBy(array("url_produccion" => $_SERVER['HTTP_HOST'])); 
+           $url = str_replace("www.", "", $_SERVER['HTTP_HOST']);
+           $cliente = $cliente_repository->findOneBy(array("url_produccion" => $url)); 
         }elseif(APPLICATION_ENV == "development"){
            $cliente = $cliente_repository->findOneBy(array("url_development" => $_SERVER['HTTP_HOST']));  
         }
