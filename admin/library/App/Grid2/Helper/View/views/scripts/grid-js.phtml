@@ -1,0 +1,36 @@
+
+var table<?php echo $this->title; ?>;
+
+$(document).ready( function() {
+  table<?php echo $this->title; ?> = initTable<?php echo $this->title; ?>();
+  
+  $('#search_<?php echo $this->title; ?>').on( 'click', function () {
+        $('#<?php echo $this->title; ?>').dataTable().api()
+                                                     .draw(false);
+        $(this).parent().children('.has-success').removeClass('has-success');
+    });
+} );
+ 
+function initTable<?php echo $this->title; ?>() {
+  return $('#<?php echo $this->title; ?>').dataTable( {
+        "processing": true,
+        "serverSide": true,
+        "stateSave": true,
+        "searching": false,
+        "columns": [
+                    <?php echo $this->columns; ?>
+                  ],
+        "ajax": {
+            "url": "/grid2/index/list/",
+            "type": "POST",
+            "data": function ( d ) {
+                d.name = "<?php echo $this->title; ?>";
+                <?php echo $this->params; ?>
+                d.format = "json";
+            }
+        }
+    });
+}
+
+
+ 

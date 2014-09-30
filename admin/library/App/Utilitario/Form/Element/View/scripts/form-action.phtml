@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Shorthill
+ *
+ * @copyright   Copyright (c) 2011 Shorthill Solutions (http://www.shorthillsolutions.com)
+ * @author      Carlos Ayala <carlos.ayala@shorthillsolutions.com>
+ */
+
+$attribs = $this->element->getAttribs();
+
+?>
+
+<div class="form-group">
+    <label class="col-sm-2 control-label"></label>
+    <div class="col-sm-10">
+        <button class="btn btn-blue" type="submit"><i class="fa fa-floppy-o"></i> Save</button>
+        <button class="btn btn-default" type="reset" onClick="document.location.href='<?php echo $attribs['cancel'] ?>'"><i class="fa fa-ban"></i> Cancel</button>
+    </div>
+</div>

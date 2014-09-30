@@ -1,0 +1,12 @@
+<li>
+    <div class="imgholder">
+        <img <?php echo $this->imageSize; ?> src="<?php echo $this->img_url; ?>">
+    </div>
+    <p>
+        <input type="checkbox" data-toggle="tooltip" data-placement="top" title="Select Image">
+        <span data-toggle="tooltip" data-placement="top" title="<?php echo $this->name; ?>"><?php echo $this->name_corto; ?></span>
+        
+     
+        <i class="fa fa-ban delete-image" indice="<?php echo $this->id; ?>" data-toggle="tooltip" data-placement="top" title="Delete Image"></i>
+    </p>
+</li>

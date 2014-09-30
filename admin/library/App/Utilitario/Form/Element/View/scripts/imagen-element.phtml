@@ -1,0 +1,71 @@
+<?php
+$attribs = $this->element->getAttribs();
+?>
+
+<div class="form-group">
+    <label title="<?php echo $attribs['title']; ?>" data-rel="tooltip" class="col-sm-2 control-label required" for="<?php echo $this->element->getName() ?>"><?php echo $this->element->getLabel() ?></label>
+    <div class="col-sm-2" >
+        <div class="thumbnail">
+            <a title="<?php echo $attribs['fileurl'] ?>" href="<?php echo $attribs['fileurl'] ?>">
+                <img id="<?php echo $this->element->getName() ?>_thumbnail" src="<?php echo $attribs['thumbnail']; ?>" />
+            </a>
+        </div>
+    </div>
+    
+    <div id="<?php echo $this->element->getName() ?>-contenedor" class="col-sm-8">    
+        <input type="hidden" class="fileid" name="<?php echo $this->element->getName() ?>_id" id="<?php echo $this->element->getName() ?>_id" value="<?php echo $this->element->getValue() ?>" />
+        <input type="hidden" class="filename" id="<?php echo $this->element->getName() ?>_filename" value="<?php echo $attribs['filename'] ?>" />
+        
+        <ul id="myTab" class="nav nav-pills">
+            <li class="active">
+                <a href="#upload" data-toggle="tab">Upload Image</a>
+            </li>
+            <li>
+                <a href="#gallery" data-toggle="tab">Image Gallery</a>
+            </li>
+            
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="upload">
+                <input id="<?php echo $this->element->getName() ?>" class="input-image <?php echo $attribs['class']; ?>" type="file" data-rel="tooltip" name="<?php echo $this->element->getName() ?>" />
+                <p class="help-block">(jpg, jpeg, png, gif, bmp)</p>
+                <div id="<?php echo $this->element->getName() ?>_error" class="alert alert-danger"></div>
+                <div id="<?php echo $this->element->getName() ?>_progress_bar" class="progress-bar progress" style="margin-bottom: 9px;width:195px">
+                    <div class="bar" style="width: 30%">0%</div>
+                </div>
+            </div>
+            <div class="gallery tab-pane fade" id="gallery" uploadname="<?php echo $this->element->getName() ?>">
+                
+                <div class="col-lg-4">
+                    <div class="input-group">
+                        <input id="<?php echo $this->element->getName() ?>_search" uploadname="<?php echo $this->element->getName() ?>" class="form-control gallery-search" type="text" value="" placeholder="Search Image" name="search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12">&nbsp;</div>
+                <div id="<?php echo $this->element->getName() ?>-wookmark-container" class="col-sm-12">
+                    <ul id="<?php echo $this->element->getName() ?>-tiles" class="tiles" uploadname="<?php echo $this->element->getName() ?>">
+                        <?php echo $attribs['gallery']; ?>
+                    </ul>
+                </div>
+                <div class="col-lg-12">&nbsp;</div>
+                <div class="col-lg-12">
+                    <div class="btn-group btn-group-justified">
+                        <a id="<?php echo $this->element->getName() ?>-image-load-more" class="btn btn-white load-more" uploadname="<?php echo $this->element->getName() ?>" indice="30" role="button">Load More Images</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        
+    </div>
+    
+</div>
+
+
+

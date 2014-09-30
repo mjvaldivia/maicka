@@ -1,0 +1,16 @@
+<?php
+if($this->element->getValue()) $checked = "checked=\"checked\"";
+else $checked = "";
+?>
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+            <label>
+                <input value="1" id="<?php echo $this->element->getId(); ?>" name="<?php echo $this->element->getId(); ?>" type="checkbox" <?php echo $checked; ?>>
+                <?php echo $this->element->getLabel(); ?>
+            </label>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * Shorthill
+ *
+ * @copyright   Copyright (c) 2013 Shorthill Solutions (http://www.shorthillsolutions.com)
+ * @author      Carlos Ayala <carlos.ayala@shorthillsolutions.com>
+ */
+?>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="page-title">
+            <h1>Item
+                <small>Management</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><i class="fa fa-dashboard"></i> <a href="/default"> Dashboard </a></li>
+                <li>Item</li>
+                <li class="active">Master</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <!-- Striped Responsive Table -->
+    <div class="col-lg-2">
+        <div class="portlet portlet-default">
+            <div class="portlet-heading">
+                <div class="portlet-title">
+                    <h5><i class="fa fa-search"></i> Search</h5>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="portlet-body">
+                <?php echo $this->form; ?>
+            </div>
+        </div>
+        <!-- /.portlet -->
+    </div>
+    <!-- /.col-lg-6 -->
+    
+    <div class="col-lg-10">
+        <div class="portlet portlet-default">
+            <div class="portlet-heading">
+                <div class="portlet-title">
+                    <h5><i class="fa fa-bars"></i> List</h5>
+                </div>
+                <div class="portlet-widgets">
+                    <a href="/item/index/new" class="btn btn-xs btn-green">
+                        <i class="fa fa-file-o"></i>
+                        New Item
+                     </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="portlet-body">
+                
+                <?php echo $this->ListaMaster(); ?>
+                
+            </div>
+        </div>
+        <!-- /.portlet -->
+    </div>
+    <!-- /.col-lg-6 -->
+
+    
+
+</div>

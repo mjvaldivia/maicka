@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="page-title">
+            <h1>Shipping
+                <small>Companies</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><i class="fa fa-dashboard"></i> <a href="/default"> Dashboard </a></li>
+                <li>Shipping</li>
+                <li class="active">Companies</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Striped Responsive Table -->
+    <div class="col-lg-2">
+        <div class="portlet portlet-default">
+            <div class="portlet-heading">
+                <div class="portlet-title">
+                    <h5><i class="fa fa-search"></i> Search</h5>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="portlet-body">
+                <?php echo $this->form; ?>
+            </div>
+        </div>
+        <!-- /.portlet -->
+    </div>
+    <!-- /.col-lg-6 -->
+    
+    <div class="col-lg-10">
+        <div class="portlet portlet-default">
+            <div class="portlet-heading">
+                <div class="portlet-title">
+                    <h5><i class="fa fa-bars"></i> List</h5>
+                </div>
+                <div class="portlet-widgets">
+                    <a href="/shipping/companies/new" class="btn btn-xs btn-green">
+                        <i class="fa fa-file-o"></i>
+                        New Company
+                     </a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="portlet-body">
+                
+                <?php echo $this->ListaCompanies(); ?>
+                
+            </div>
+        </div>
+        <!-- /.portlet -->
+    </div>
+    <!-- /.col-lg-6 -->
+
+    
+
+</div>

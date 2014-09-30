@@ -1,0 +1,136 @@
+<?php echo $this->doctype(); ?>
+<html>
+    <head>
+        <?php
+        echo $this->headTitle();
+        echo $this->headMeta();
+        echo $this->headLink();
+        echo $this->headStyle();
+        ?>
+        <!--[if lt IE 9]>
+		<link rel="stylesheet" href="css/bootstrap_ie7.css" type="text/css">
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+        <link rel="shortcut icon" href="../img/favicon.ico" />
+    </head>
+    
+    <body>
+	
+        <div class="container-fluid">
+            <div class="row"><!-- start header -->
+                <div class="span4 logo">
+                        <a href="index.html">
+                            <div class="row">
+                                    <div class="span3 logo">
+                                            <img src="/img/logo.jpg" />
+                                    </div>
+                            </div>
+                        </a>
+                </div>		
+                <div class="span7 pull-right main_menu">
+                        <div class="navbar">
+                                <div class="container">
+                                         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                        </a>
+
+                                        <div class="nav-collapse">
+                                                <ul class="nav nav-pills">
+                                                        <li class="active"><a href="/">Inicio</a></li>
+                                                        <li class=""><a href="/cabana">Cabañas</a></li>
+                                                        <li class=""><a href="/galeria">Galeria</a></li>
+                                                        <li class=""><a href="/mapa">Ubicacion</a></li>
+                                                </ul>
+                                        </div><!-- /.nav-collapse -->
+                                </div>
+                        </div><!-- /navbar -->
+                </div>
+            </div><!-- end header -->
+    
+            <?php echo $this->layout()->content; ?>
+        <div class="row">
+	<div class="span12 what_people_say">
+		<div id="quotes">
+			<blockquote class="textItem" style="display: none;">
+				<p>Pase las mejores vacaciones en sus hermosas cabañas, muchas gracias por todo.</p>
+				<small> Carlos Ayala Calvo</small>
+			</blockquote>			
+			
+			<blockquote class="textItem" style="display: none;">
+				<p>Espero volver algun dia. Los recordamos con mucho cariño</p>
+				<small>Maria Jose Valdivia</small>
+			</blockquote>			
+			
+			<blockquote class="textItem" style="display: none;">
+				<p>Cumplio con todas mis expectativas</p>
+				<small>Hernaldo Valdivia</small>
+			</blockquote>
+		</div>
+	</div>	
+</div>
+        </div> <!-- /container -->
+
+        <footer>
+            <div class="container">
+                <div class="row footer_section_pre">
+
+                    <div class="span4">
+                            <h4>Cabañas Maicka<span class="line"></span></h4>
+
+                            <p>2247 Copperhead Road, Hartford, CT 06103</p>
+                            <p>Tel: Alexcter Icka (+56 9 929 59 897)<br />
+                                Claudia Cuevas (+56 9 935 21 015)<br />Email: contacto@maicka.cl  </p>
+
+                            <ul data-facebook-action="recommend" data-url="#" class="socialcount socialcount-small recommend grade-a">
+                                    <li class="facebook"><a title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=#"><span class="social-icon icon-facebook"></span><span class="count"></span></a></li>
+                                    <li class="twitter"><a title="Share on Twitter" href="https://twitter.com/intent/tweet?text=#"><span class="social-icon icon-twitter"></span><span class="count"></span></a></li>
+                                    <li class="googleplus"><a title="Share on Google Plus" href="https://plus.appsarea.com/share?url=#"><span class="social-icon icon-googleplus"></span><span class="count"></span></a></li>
+                            </ul>
+                            <br />
+                            <p class="copy">All content &copy; 2013 <a href="http://appsarea.com/">Unidigital</a></p>
+
+                    </div>
+                    <div class="span4">
+                        <h4>Ofertas especiales<span class="line"></span></h4>
+                        <p><b>FREE</b> Breakfast, <b>FREE</b> Internet, <b>FREE</b> Tour = Savings!</p>
+                        <p>Stay five nights and get one night totally <b>FREE</b>!</p>
+                        <p>Save up to <b>20% OFF</b> our Best Available Rate by booking with us in advance.</p>
+                    </div>
+                    <div class="span4">
+                        <h4>Sponsors<span class="line"></span></h4>
+                        <ul class="thumbnails">
+                            <li class="span2">
+                                <div class="thumbnail">
+                                        <img src="css/images/airlines/virgin4.gif" alt="">
+                                </div>
+                            </li>				
+                            <li class="span2">
+                                <div class="thumbnail">
+                                        <img src="css/images/airlines/ba2.gif" alt="">
+                                </div>
+                            </li>				
+                            <li class="span2">
+                                <div class="thumbnail">
+                                        <img src="css/images/airlines/delta3.gif" alt="">
+                                </div>
+                            </li>										
+                            <li class="span2">
+                                <div class="thumbnail">
+                                        <img src="css/images/airlines/ac_white.jpg" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+	
+            </div>
+	
+	
+        </footer>
+        <?php echo $this->headScript(); ?>
+
+    </body>
+</html>
+

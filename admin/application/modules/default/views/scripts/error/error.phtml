@@ -1,0 +1,59 @@
+<!-- begin PAGE TITLE ROW -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="page-title">
+            <h1>
+                500 Error
+                <small>Internal Server Error</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                </li>
+                <li class="active">500 Error</li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<!-- end PAGE TITLE ROW -->
+
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <h1 class="error-title">500</h1>
+        <h4 class="error-msg"><i class="fa fa-warning text-red"></i> Internal Server Error</h4>
+        <p class="lead">The web server encountered an unexpected condition that prevented it from fulfilling your request. Please try again or contact the Shorthill support staff to resolve the issue.</p>
+        <ul class="list-unstyled">
+            <li>
+                <a class="btn btn-default" href="#">Open Support Ticket</a>
+            </li>
+            <li>
+                <br>
+            </li>
+            <li>
+                <a class="btn btn-default" href="/default">Back to Dashboard</a>
+            </li>
+        </ul>
+   
+        <div class="content">
+            <h3>Exception information:</h3>
+            <p>
+                <b>Message:</b> <?php echo $this->exception_message ?>
+            </p>
+
+            <?php if (isset($this->exception)): ?>
+            <h3>Stack trace:</h3>
+            <pre><?php echo $this->exception->getTraceAsString() ?>
+            </pre>
+
+            <h3>Request Parameters:</h3>
+            <pre><?php echo var_export($this->request->getParams(), true) ?>
+            </pre>
+            <?php endif ?>
+            <br/>
+        </div>
+       
+    </div>
+    <!-- /.col-lg-6 -->
+</div>
+<!-- /.row -->
